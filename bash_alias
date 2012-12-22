@@ -1,0 +1,8 @@
+alias ls='ls -hF'                 # classify files in colour
+alias ll='ls -l'                              # long list
+alias l='ls -CF'                              #
+alias mvnCleanInstall='mvn -Dmaven.test.skip -Dautoconf.skip clean install'
+alias mvnSkip='mvn -Dmaven.test.skip -Dautoconf.skip'
+alias mvnProject='mvn -Dmaven.test.skip -Dautoconf.skip clean install eclipse:clean eclipse:eclipse -DdownloadSources=true'
+alias mvnEclipse='mvn eclipse:eclipse -DdownloadSources=true'
+alias mvnInstall='mvn -Dmaven.test.skip -Denforcer.skip -Dcheck.parent.skip -o install' 
