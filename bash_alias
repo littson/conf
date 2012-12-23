@@ -1,6 +1,6 @@
-alias ls='ls -hF'                 # classify files in colour
-alias ll='ls -l'                              # long list
-alias l='ls -CF'                              #
+alias ls='ls -G -F -h'
+alias ll='ls -G -F -h -l'
+alias grep='grep --color=auto'
 alias mvnCleanInstall='mvn -Dmaven.test.skip -Dautoconf.skip clean install'
 alias mvnSkip='mvn -Dmaven.test.skip -Dautoconf.skip'
 alias mvnProject='mvn -Dmaven.test.skip -Dautoconf.skip clean install eclipse:clean eclipse:eclipse -DdownloadSources=true'

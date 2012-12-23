@@ -26,6 +26,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
+"set term=xterm-256color
+"let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
