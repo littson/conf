@@ -1,4 +1,11 @@
 set nocompatible               " be iMproved
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
 filetype off                   " required!
 filetype plugin indent on
 set number
@@ -13,25 +20,21 @@ set softtabstop=4
 set cindent
 set nobackup
 syntax enable
-set fileencodings=utf-8,gb2312,gbk,gb18030
+set enc=utf-8
+set fencs=utf-8,gb2312,gbk,gb18030
 
 set cursorline
 set backspace=indent,eol,start
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+Bundle 'ctrlp.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" color
 Bundle 'altercation/vim-colors-solarized'
-
-"set term=xterm-256color
-"let g:solarized_termcolors=256
+set term=xterm-256color
+let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
 
-Bundle 'ctrlp.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
