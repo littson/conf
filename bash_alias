@@ -1,3 +1,4 @@
+alias cd..='cd ..'
 alias ls='ls -G -F -h'
 alias ll='ls -G -F -h -l'
 alias grep='grep --color=auto'
@@ -7,3 +8,8 @@ alias mvnProject='mvn -Dmaven.test.skip -Dautoconf.skip clean install eclipse:cl
 alias mvnEclipse='mvn eclipse:eclipse -DdownloadSources=true'
 alias mvnInstall='mvn -Dmaven.test.skip -Denforcer.skip -Dcheck.parent.skip -o install' 
 alias svnDiff='svn log --diff --stop-on-copy'
+
+alias svnAdd='svn st|grep "^\?"|tr -s " "|cut -d " " -f2|xargs svn add'
+alias svnAddPreview='svn st|grep "^\?"|tr -s " "|cut -d " " -f2'
+alias svnst='svn st'
+alias svnIgnore='svn propedit svn:ignore'

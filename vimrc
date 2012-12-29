@@ -1,4 +1,5 @@
 set nocompatible               " be iMproved
+filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -6,8 +7,18 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-filetype off                   " required!
+Bundle 'ctrlp.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'IndentAnything'
+Bundle 'Javascript-Indentation'
+Bundle 'JavaScript-syntax'
+
+" color
+Bundle 'altercation/vim-colors-solarized'
+
 filetype plugin indent on
+
 set number
 set autoindent
 set smartindent
@@ -26,12 +37,6 @@ set fencs=utf-8,gb2312,gbk,gb18030
 set cursorline
 set backspace=indent,eol,start
 
-Bundle 'ctrlp.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-
-" color
-Bundle 'altercation/vim-colors-solarized'
 set term=xterm-256color
 let g:solarized_termcolors=256
 syntax enable
