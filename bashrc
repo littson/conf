@@ -1,6 +1,9 @@
 PS1='\[\033[36;1m\]\u\[\033[m\]@\[\033[32;1m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ '
 export PS1
 
+export HISTCONTROL=ignoreboth
+export HISTSIZE=10000000
+
 export EDITOR=vim
 export SVN_EDITOR=vim
 
@@ -13,4 +16,12 @@ export PATH=$GROOVY_HOME/bin:/usr/local/mysql/bin:/usr/local/Cellar/subversion/1
 
 if [ -f ~/.bash_alias ]; then
 	source ~/.bash_alias
+fi
+
+if [ -f ~/.bash_completion_maven.bash ]; then
+	source ~/.bash_completion_maven.bash
+fi
+
+if [ -f ~/.bash_completion_svn.bash ]; then
+	source ~/.bash_completion_svn.bash
 fi
