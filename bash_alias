@@ -3,6 +3,7 @@ alias cd..='cd ..'
 alias ls='ls -G -F -h'
 alias l='ls'
 alias ll='ls -G -F -h -l'
+#alias grep='ack'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -10,6 +11,7 @@ alias vi=vim
 alias mkdir='mkdir -pv'
 
 # maven
+# alias mvn='mvn -T 2'
 alias mvnOffline='mvn -Denforcer.skip -Dcheck.parent.skip -o'
 alias mvnNoTest='mvn -Dmaven.test.skip'
 alias mvnCleanInstall='mvn -Dmaven.test.skip -Dautoconf.skip clean install'
@@ -25,3 +27,6 @@ alias svnAdd='svn st|grep "^\?"|tr -s " "|cut -d " " -f2|xargs svn add'
 alias svnAddPreview='svn st|grep "^\?"|tr -s " "|cut -d " " -f2'
 alias svnst='svn st'
 alias svnIgnore='svn propedit svn:ignore'
+
+# rebuild finder context menu
+alias macxfix='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
