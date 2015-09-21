@@ -1,38 +1,57 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 syntax enable
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-"Bundle 'IndentAnything'
-"Bundle 'Javascript-Indentation'
-"Bundle 'JavaScript-syntax'
-Bundle 'AutoClose'
-Bundle 'matchit.zip'
-Bundle 'JavaScript-Indent'
-Bundle 'EasyMotion'
-Bundle 'scrooloose/nerdtree'
-Bundle 'taglist.vim'
-Bundle 'groovy.vim'
-Bundle 'groovy.vim--Ruley'
-Bundle 'surround.vim'
-Bundle 'Emmet.vim'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+"Plugin 'IndentAnything'
+"Plugin 'Javascript-Indentation'
+"Plugin 'JavaScript-syntax'
+"Plugin 'AutoClose'
+Plugin 'Raimondi/delimitMate'
+Plugin 'matchit.zip'
+"Plugin 'JavaScript-Indent'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'EasyMotion'
+Plugin 'scrooloose/nerdtree'
+Plugin 'taglist.vim'
+Plugin 'groovy.vim'
+Plugin 'groovy.vim--Ruley'
+Plugin 'surround.vim'
+Plugin 'Emmet.vim'
 " colorscheme
-Bundle 'gilsondev/lizard'
-"Bundle 'nanotech/jellybeans.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jeroenbourgois/vim-actionscript'
+Plugin 'gilsondev/lizard'
+"Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jeroenbourgois/vim-actionscript'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/neocomplete.vim'
 
+"Plugin 'fatih/vim-go'
+
+call vundle#end() 
 filetype plugin indent on
 
-au BufRead,BufNewFile *.vm setfiletype html
+au BufRead,BufNewFile *.vm set filetype=html
+"au BufRead,BufNewFile *.vm set syntax=javascript
 au BufRead,BufNewFile *.as set syntax=actionscript
+au BufRead,BufNewFile *.gradle set syntax=groovy
+au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.py set filetype=python
+
+" python
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 smarttab softtabstop=4
+autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 smarttab softtabstop=4
+autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 smarttab softtabstop=4
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -43,11 +62,11 @@ set number
 set showmatch
 set ruler
 
-set smartindent
+set expandtab
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-"set expandtab
+
+"set smartindent
 
 set enc=utf-8
 set fencs=utf-8,gb2312,gbk,gb18030
@@ -117,11 +136,9 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Ctags_Cmd ='/usr/local/Cellar/ctags/5.8/bin/ctags'
 let Tlist_JS_Settings = 'javascript;s:string;a:array;o:object;f:function'
-map t :TlistToggle<CR>
+map T :TlistToggle<CR>
 
-" python
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4
 
 if has("gui_macvim")
   " Press Ctrl-Tab to switch between open tabs (like browser tabs) to 
@@ -142,3 +159,34 @@ if has("gui_macvim")
   " Command-0 goes to the last tab
   noremap <D-0> :tablast<CR>
 endif
+
+" powerline
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Source\ Code\ Pro\ For\ Powerline:h13
+
+" syntastic 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" neocomplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tail -f $1 | while read; do echo -e "$(date +%T.%N) $REPLY"; done

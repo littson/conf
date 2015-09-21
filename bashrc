@@ -1,22 +1,17 @@
 PS1='\[\033[36;1m\]\u\[\033[m\]@\[\033[32;1m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ '
 export PS1
 
-export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=10000000
 
-export EDITOR=vim
-export SVN_EDITOR=vim
+if [ -f ~/.shell/alias ]; then
+	source ~/.shell/alias
+fi
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_37-b06-434.jdk/Contents/Home
-export MAVEN_HOME=/Users/eric/dev/maven2.2.1
-#export MAVEN_HOME=/usr/share/java/maven-3.0.3
-export MAVEN_OPTS="-Xms512m -Xmx1024m"
-export GROOVY_HOME=/Users/eric/dev/groovy-2.0.6
+if [ -f ~/.shell/functions ]; then
+	source ~/.shell/functions
+fi
 
-export PATH=/Users/eric/bin:$GROOVY_HOME/bin:/usr/local/mysql/bin:/usr/local/Cellar/subversion/1.7.8/bin:$PATH
-
-if [ -f ~/.bash_alias ]; then
-	source ~/.bash_alias
+if [ -f ~/.shell/variables ]; then
+	source ~/.shell/variables
 fi
 
 if [ -f ~/.bash_completion_maven.bash ]; then
@@ -26,3 +21,10 @@ fi
 if [ -f ~/.bash_completion_svn.bash ]; then
 	source ~/.bash_completion_svn.bash
 fi
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/eric/.jenv/bin/jenv-init.sh" ]] && source "/Users/eric/.jenv/bin/jenv-init.sh" && source "/Users/eric/.jenv/commands/completion.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

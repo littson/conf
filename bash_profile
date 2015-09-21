@@ -10,3 +10,8 @@ fi
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/eric/.jenv/bin/jenv-init.sh" ]] && source "/Users/eric/.jenv/bin/jenv-init.sh" && source "/Users/eric/.jenv/commands/completion.sh"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

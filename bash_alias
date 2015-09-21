@@ -3,6 +3,8 @@ alias cd..='cd ..'
 alias ls='ls -G -F -h'
 alias l='ls'
 alias ll='ls -G -F -h -l'
+alias lsjava='find . -name "*.java"'
+alias lsxml='find . -name "*.xml"'
 #alias grep='ack'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -27,6 +29,26 @@ alias svnAdd='svn st|grep "^\?"|tr -s " "|cut -d " " -f2|xargs svn add'
 alias svnAddPreview='svn st|grep "^\?"|tr -s " "|cut -d " " -f2'
 alias svnst='svn st'
 alias svnIgnore='svn propedit svn:ignore'
+alias svnUrl='svn info|grep URL|cut -d " " -f2'
+alias svnUrlCopy='svn info|grep URL|cut -d " " -f2|tr "\n" " "|pbcopy'
 
 # rebuild finder context menu
 alias macxfix='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
+
+
+#ssh
+alias sshMtee='ssh jinsong.zhoujs@10.232.19.36'
+alias sshPrd='ssh jinsong.zhoujs@login1.cm3.taobao.org'
+alias sshDevWedjat='ssh jinsong.zhoujs@10.125.205.154'
+
+# antlr4
+alias antlr4='java -jar /Users/eric/dev/antlr-4.0-complete.jar'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
+
+#mysql
+alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
+alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
+alias mysqlstatus='sudo /usr/local/mysql/support-files/mysql.server status'
+
+#hadoop
+alias hadoop='/Users/eric/dev/hadoop/bin/hadoop'

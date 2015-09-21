@@ -1,0 +1,33 @@
+[user]
+	name = jinsong
+	email = littson@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/eric/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[http]
+	proxy = socks5://127.0.0.1:1080
+[https]
+	proxy = socks5://127.0.0.1:1080
+[color]
+	ui = true
