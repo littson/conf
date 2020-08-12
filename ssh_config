@@ -1,0 +1,126 @@
+Host dev1
+    HostName 192.168.1.182
+    #Port 22000
+    User fungo
+
+Host ali_hk
+    HostName 203.88.167.133
+    User admin
+
+Host bops
+    HostName 121.40.94.43
+    User admin
+
+Host build
+    HostName 120.26.103.7
+    #User admin
+    User jinsong
+
+Host monitor
+    #HostName 115.28.23.126
+    HostName 118.190.93.34
+    User jinsong
+
+Host xiaoai_test
+    HostName 114.55.57.84
+    User admin
+
+Host gogs
+    HostName git.fungo.nagezan.net
+    #Port 22000
+    #User fungo
+
+Host new_mac
+    HostName 192.168.31.26
+    User eric
+
+Host yuntu_test
+    HostName 116.62.37.170
+    User admin
+
+Host hadoop-m
+    HostName 118.178.195.166
+    User root
+
+Host ss_au
+    HostName 2.56.240.164
+    User root
+Host bandwagon
+    HostName 172.96.204.188
+    User root
+    Port 27735
+Host tg_test
+    HostName 47.75.40.123
+    User root
+
+Host m2_admin
+    HostName 180.97.83.237
+    User admin
+Host m2_root
+    HostName 180.97.83.237
+    User root
+Host m3_admin
+    HostName 61.183.37.22
+    User admin
+Host m3_root
+    HostName 61.183.37.22
+    User root
+Host m4_admin
+    HostName 61.183.37.40
+    User admin
+Host m4_root
+    HostName 61.183.37.40
+    User root
+
+Host zenlayer_us1
+    HostName 128.14.130.94
+    User root
+Host zenlayer_us2
+    HostName 128.14.156.198
+    User root
+
+Host mac_server_company1
+    HostName 192.168.1.230
+    User fungo
+
+Host website_freetv8.net
+    HostName 47.75.3.199
+    User root
+
+Host manytv.net
+    HostName 43.246.209.115
+    User root
+
+Host yuntutv.net
+    HostName 47.244.79.158
+    User admin
+
+Host us_yuntu_app1_47.254.31.99
+    HostName 47.254.31.99
+    User root
+
+Host jump_hk
+    HostName 47.75.40.123
+    User jinsong
+
+Host pi_home
+    HostName 192.168.50.251
+    User pi
+
+Host pi_sz
+    HostName homesz.ericz.xyz
+    Port 10022
+    User pi
+Host aws_us1
+    HostName ec2-52-53-242-104.us-west-1.compute.amazonaws.com
+    User ubuntu
+    IdentityFile ~/work/confs/awskey201906.pem
+
+Host fruit_admin
+    HostName 47.89.254.207
+    User root
+
+Host jc1
+    HostName 68.183.183.218
+    User root
+    IdentityFile ~/.ssh/id_rsa_larkkk

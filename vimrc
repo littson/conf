@@ -92,6 +92,7 @@ set title
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 "set clipboard=unnamed
 
@@ -162,22 +163,22 @@ endif
 
 " powerline
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
-set guifont=Source\ Code\ Pro\ For\ Powerline:h13
+set guifont=Source\ Code\ Pro\ For\ Powerline:h14
 
 " syntastic 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " neocomplete
 " Disable AutoComplPop.

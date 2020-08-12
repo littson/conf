@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!-- ======================================================================== -->
+<!--  settings.xml for maven users                                            -->
+<!--  Version: 3                                                              -->	
+<!--  Auhtor: jingshun shi                                                    -->	
+<!--  $Id: settings.xml 220145 2012-11-23 01:41:14Z jingshun.shijs $ -->	
+<!-- ======================================================================== -->
+
+<settings>
+	<!-- ======================================================================== -->
+	<!--  Accounts for SCM ONLY                                                   -->
+	<!-- ======================================================================== -->
+	<servers>
+		<server>
+			<id>releases</id>
+			<username>maven</username>
+			<password>secret</password>
+		</server>
+		<server>
+			<id>snapshots</id>
+			<username>maven</username>
+			<password>secret</password>
+		</server>
+	</servers>
+
+	<!-- ======================================================================== -->
+	<!--  Profiles                                                                -->
+	<!-- ======================================================================== -->
+	<profiles>
+		<profile>
+			<!-- ======================================================================== -->
+            <!--  Managed Repositories for Alibaba Dev,include tabao repos and center repo-->
+            <!-- ======================================================================== -->
+            <id>uk</id>
+            <repositories>  
+                <repository>  
+                    <id>uk</id>  
+                    <name>local private nexus</name>  
+                    <url>http://uk.maven.org/maven2/</url>  
+                    <releases>  
+                        <enabled>true</enabled>  
+                    </releases>  
+                    <snapshots>  
+                        <enabled>false</enabled>  
+                    </snapshots>  
+                </repository>  
+            </repositories>  
+        </profile>
+		<profile>
+			<!-- ======================================================================== -->
+            <!--  Managed Repositories for Alibaba Dev,include tabao repos and center repo-->
+            <!-- ======================================================================== -->
+            <id>oschina</id>
+            <repositories>  
+                <repository>  
+                    <id>nexus</id>  
+                    <name>local private nexus</name>  
+                    <url>http://maven.oschina.net/content/groups/public/</url>  
+                    <releases>  
+                        <enabled>true</enabled>  
+                    </releases>  
+                    <snapshots>  
+                        <enabled>false</enabled>  
+                    </snapshots>  
+                </repository>  
+            </repositories>  
+            <pluginRepositories>  
+                <pluginRepository>  
+                    <id>nexus</id>  
+                    <name>local private nexus</name>  
+                    <url>http://maven.oschina.net/content/groups/public/</url>  
+                    <releases>  
+                        <enabled>true</enabled>  
+                    </releases>  
+                    <snapshots>  
+                        <enabled>false</enabled>  
+                    </snapshots>  
+                </pluginRepository>  
+            </pluginRepositories>  
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <!--
+        <activeProfile>oschina</activeProfile>
+        -->
+        <activeProfile>uk</activeProfile>
+    </activeProfiles>
+</settings>

@@ -1,16 +1,17 @@
 alias df='df -h'
 alias cd..='cd ..'
 alias ls='ls -G -F -h'
-alias l='ls'
-alias ll='ls -G -F -h -l'
 alias lsjava='find . -name "*.java"'
 alias lsxml='find . -name "*.xml"'
+alias l='ls'
+alias ll='ls -G -F -h -l -t'
 #alias grep='ack'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias vi=vim
 alias mkdir='mkdir -pv'
+alias s=subl
 
 # maven
 # alias mvn='mvn -T 2'
@@ -21,7 +22,7 @@ alias mvnSkip='mvn -Dmaven.test.skip -Dautoconf.skip'
 alias mvnProject='mvn -Dmaven.test.skip -Dautoconf.skip clean install eclipse:clean eclipse:eclipse -DdownloadSources=true'
 alias mvnEclipse='mvn eclipse:eclipse -DdownloadSources=true'
 alias mvnInstall='mvn -Dmaven.test.skip -Denforcer.skip -Dcheck.parent.skip -o install' 
-alias mvnIdea='mvn idea:clean idea:idea'
+alias mvnrebuild='mvn -Dmaven.test.skip install' 
 
 # subversion
 alias svnDiff='svn log --diff --stop-on-copy'
@@ -29,8 +30,8 @@ alias svnAdd='svn st|grep "^\?"|tr -s " "|cut -d " " -f2|xargs svn add'
 alias svnAddPreview='svn st|grep "^\?"|tr -s " "|cut -d " " -f2'
 alias svnst='svn st'
 alias svnIgnore='svn propedit svn:ignore'
-alias svnUrl='svn info|grep URL|cut -d " " -f2'
-alias svnUrlCopy='svn info|grep URL|cut -d " " -f2|tr "\n" " "|pbcopy'
+alias svnUrl='svn info|grep "URL:"|grep http|cut -d " " -f2'
+alias svnUrlCopy='svn info|grep "URL:"|grep http|cut -d " " -f2|tr "\n" " "|pbcopy'
 
 # rebuild finder context menu
 alias macxfix='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
@@ -40,6 +41,7 @@ alias macxfix='/System/Library/Frameworks/CoreServices.framework/Versions/A/Fram
 alias sshMtee='ssh jinsong.zhoujs@10.232.19.36'
 alias sshPrd='ssh jinsong.zhoujs@login1.cm3.taobao.org'
 alias sshDevWedjat='ssh jinsong.zhoujs@10.125.205.154'
+alias sshEric='ssh eric@10.12.74.13'
 
 # antlr4
 alias antlr4='java -jar /Users/eric/dev/antlr-4.0-complete.jar'
@@ -52,3 +54,39 @@ alias mysqlstatus='sudo /usr/local/mysql/support-files/mysql.server status'
 
 #hadoop
 alias hadoop='/Users/eric/dev/hadoop/bin/hadoop'
+alias hcat='/Users/eric/dev/hadoop/bin/hadoop fs -cat'
+alias hls='/Users/eric/dev/hadoop/bin/hadoop fs -ls'
+alias hlsr='/Users/eric/dev/hadoop/bin/hadoop fs -lsr'
+alias hrm='/Users/eric/dev/hadoop/bin/hadoop fs -rm'
+alias hrmr='/Users/eric/dev/hadoop/bin/hadoop fs -rmr'
+alias hput='/Users/eric/dev/hadoop/bin/hadoop fs -put'
+
+alias yarn='/Users/eric/dev/hadoop/bin/yarn'
+
+#bower
+alias bower='noglob bower'
+
+alias download='axel'
+alias p='python'
+
+alias redis118='redis-cli -h 192.168.1.118 -a 559ac5cb873eea9a5d2417f0667f110a'
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+alias dev_mysql_start='brew services start mysql'
+alias dev_redis_start='redis-server /usr/local/etc/redis.conf'
+alias dev_php_start='php-fpm'
+
+alias proxy='export all_proxy=socks5://127.0.0.1:1086'
+alias unproxy='unset all_proxy'
+
+alias docker_init='eval $(docker-machine env default)'
+alias docker_ip='docker-machine ip'
+
+alias dex2jar='/Users/eric/dev/android_re/dex-tools-2.1-SNAPSHOT/d2j-dex2jar.sh'
+
+alias dev_java="/usr/libexec/java_home -V"
+alias dev_java10="export JAVA_HOME=`/usr/libexec/java_home -v 10`; java -version"
+alias dev_java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+alias dev_java8="export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"; java -version"
+

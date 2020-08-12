@@ -26,8 +26,12 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [http]
-	proxy = socks5://127.0.0.1:1080
+    # clash 7891
+    # trojan 1091
+    #proxy = socks5://127.0.0.1:7891
+    #proxy = socks5://127.0.0.1:1091
 [https]
-	proxy = socks5://127.0.0.1:1080
+    #proxy = socks5://127.0.0.1:7891
+    #proxy = socks5://127.0.0.1:1091
 [color]
 	ui = true
