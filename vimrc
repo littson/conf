@@ -169,7 +169,8 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
-set guifont=Source\ Code\ Pro\ For\ Powerline:h14
+set guifont=Menlo\ Regular:h14
+"set guifont=Source\ Code\ Pro\ For\ Powerline:h14
 
 " syntastic 
 "set statusline+=%#warningmsg#

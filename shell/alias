@@ -86,7 +86,7 @@ alias docker_ip='docker-machine ip'
 alias dex2jar='/Users/eric/dev/android_re/dex-tools-2.1-SNAPSHOT/d2j-dex2jar.sh'
 
 alias dev_java="/usr/libexec/java_home -V"
-alias dev_java10="export JAVA_HOME=`/usr/libexec/java_home -v 10`; java -version"
-alias dev_java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+#alias dev_java10="export JAVA_HOME=`/usr/libexec/java_home -v 10`; java -version"
+#alias dev_java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 alias dev_java8="export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"; java -version"
 
